@@ -1,0 +1,48 @@
+.cart-item-right {
+  width: 100%;
+  display: flex;
+  background: #fff;
+}
+.cart-item-right .left {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.cart-item-right .left img {
+  width: 100%;
+}
+.cart-item-right .right {
+  flex: 1;
+  padding: 10px;
+}
+.cart-item-right .right .title {
+  font-size: 15px;
+  height: 40px;
+}
+.cart-item-right .right .price {
+  font-size: 14px;
+  color: #888;
+  line-height: 25px;
+}
+.cart-item-right .right .number {
+  line-height: 30px;
+}
+.cart-item-right .right .number span {
+  border: 1px solid #eee;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 0 2px;
+}
+.cart-item-right .right .number span.can:active {
+  background: #eee;
+}
+.cart-item-right .right .number span.r {
+  float: right;
+}
+.cart-item-right .right .number span.r:active {
+  background: #eee;
+}

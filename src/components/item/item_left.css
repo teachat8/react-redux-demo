@@ -1,0 +1,10 @@
+.cart-item-left {
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.cart-item-left img {
+  width: 100%;
+}

@@ -4,7 +4,7 @@ import Model from '../components/model.js'
 
 const mapStateToProps = (state) => ({
   buys: state.buys,
-  money: ((buys) => {
+  money: ((buys) => { // 计算价格
     let money = 0;
     for (let i = 0; i < buys.length; i++) {
       money += buys[i].buyNum * buys[i].price

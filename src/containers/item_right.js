@@ -8,13 +8,13 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    resEvent: (item) => {
+    resEvent: (item) => { // 数量减
       if (item.buyNum > 1) dispatch(res(item.id))
     },
-    addEvent: (item) => {
+    addEvent: (item) => { // 数量加
       dispatch(add(item.id))
     },
-    deleteEvent: (item) => {
+    deleteEvent: (item) => { // 从购物车删除
       let obj = come(item.id);
       obj.info = item;
       dispatch(obj);

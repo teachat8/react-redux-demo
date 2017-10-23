@@ -6,7 +6,8 @@ import '../components/app.css'
 import {connect} from 'react-redux'
 import {toogle_model} from '../actions/'
 
-const App = ({goods, buys, model, submitEvent}) => (
+// app 的显示组件
+const App = ({goods, buys, model, submitEvent, money}) => (
   <div className="cart">
     <div className="top">
       <div className="left-box">
@@ -30,7 +31,7 @@ const App = ({goods, buys, model, submitEvent}) => (
       </div>
     </div>
     <div className="bottom">
-      <div className="left">点击左侧商品库商品，即可添加到右侧购物车</div>
+      <div className="left">点击左侧商品库商品，即可添加到右侧购物车。　　 <span style={{color: '#ff6a00'}}>总价：{money} 元</span></div>
       <div className="right" onClick={submitEvent}>提交订单</div>
     </div>
     {
@@ -40,16 +41,24 @@ const App = ({goods, buys, model, submitEvent}) => (
     }
   </div>
 )
+// 注入方法
 const mapDispatchToProps = (dispatch) => ({
   submitEvent: () => {
     dispatch(toogle_model())
   }
 })
-
+// 注入数据
 const mapStateToProps = (state) => ({
   goods: state.goods,
   buys: state.buys,
-  model: state.model
+  model: state.model,
+  money: ((buys) => { // 计算价格
+    let money = 0;
+    for (let i = 0; i < buys.length; i++) {
+      money += buys[i].buyNum * buys[i].price
+    }
+    return money
+  })(state.buys)
 })
 
 const AppContainer = connect(

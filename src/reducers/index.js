@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import goods from './goods.js'
 import buys from './buys.js'
-import money from './money.js'
+import model from './model.js'
 
 const App = combineReducers({
   goods,
   buys,
-  money
+  model
 })
 
 export default App

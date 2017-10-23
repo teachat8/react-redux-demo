@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {checked, come, res, add, delete1, money} from '../actions/'
+import {come, res, add, delete1} from '../actions/'
 import ItemRight from '../components/item/item_right.js'
 
 const mapStateToProps = (state) => ({
@@ -13,7 +13,6 @@ const mapDispatchToProps = (dispatch) => {
     },
     addEvent: (item) => {
       dispatch(add(item.id))
-      dispatch(money())
     },
     deleteEvent: (item) => {
       let obj = come(item.id);

@@ -5,7 +5,7 @@ const Item = ({id, imgSrc, buyNum, title, price, desc, resEvent, addEvent, delet
   return (
     <div className="cart-item-right">
       <div className="left">
-        <img src={imgSrc}/>
+        <img src={imgSrc} alt=""/>
       </div>
       <div className="right">
         <div className="title">{title}</div>

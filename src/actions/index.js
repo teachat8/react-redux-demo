@@ -28,6 +28,6 @@ export const delete1 = (id) => ({
   id
 })
 
-export const money = () => ({
-  type: 'MONEY'
+export const toogle_model = () => ({
+  type: 'TOOGLE_MODEL'
 })

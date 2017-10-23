@@ -1,11 +1,12 @@
 import React from 'react'
 import ItemRight from './item_right.js'
 import ItemLeft from './item_left.js'
+import Model from './model.js'
 import '../components/app.css'
 import {connect} from 'react-redux'
-import {} from '../actions/'
+import {toogle_model} from '../actions/'
 
-const App = ({goods, buys, money}) => (
+const App = ({goods, buys, model, submitEvent}) => (
   <div className="cart">
     <div className="top">
       <div className="left-box">
@@ -29,19 +30,26 @@ const App = ({goods, buys, money}) => (
       </div>
     </div>
     <div className="bottom">
-      <div className="left">共计：{money}元</div>
-      <div className="right">立即购买</div>
+      <div className="left">点击左侧商品库商品，即可添加到右侧购物车</div>
+      <div className="right" onClick={submitEvent}>提交订单</div>
     </div>
+    {
+      (() => {
+        if (model) return <Model />
+      })()
+    }
   </div>
 )
 const mapDispatchToProps = (dispatch) => ({
-
+  submitEvent: () => {
+    dispatch(toogle_model())
+  }
 })
 
 const mapStateToProps = (state) => ({
   goods: state.goods,
   buys: state.buys,
-  money: state.money
+  model: state.model
 })
 
 const AppContainer = connect(

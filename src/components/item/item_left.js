@@ -7,7 +7,7 @@ const Item = ({data, checkEvent}) => {
     <div className="cart-item-left" onClick={() => {
       checkEvent(data)
     }}>
-      <img src={data.imgSrc}/>
+      <img src={data.imgSrc} alt="" />
     </div>
   )
 }

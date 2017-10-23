@@ -18,20 +18,10 @@
 预览地址：[点我跳转](https://www.baidu.com)。 请用Chrome浏览器-手机模式查看
 
 
-## 项目预览
-
-  用Chrome浏览器 手机模式打开，或者拖拽让浏览器变窄效果更好。自己对比体验一下吧^-^
-
-[小米官方商城（web）](http://m.mi.com/)
-
-[小米商城 高仿版](https://beautifulboys.github.io/html/mi/)
-
-下载体验(下载demo文件夹，双击index.html即可查看)。
-
 <p align="center">
-	<img src="https://github.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF1.gif" width="350px"/>
-	<img src="https://github.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF2.gif" width="350px"/>
-	<img src="https://github.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF3.gif" width="350px"/>
+	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF1.gif" width="350px"/>
+	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF2.gif" width="350px"/>
+	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF3.gif" width="350px"/>
 
 </p>
 

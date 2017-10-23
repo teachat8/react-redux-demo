@@ -19,9 +19,9 @@
 
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF1.gif" width="350px"/>
-	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF2.gif" width="350px"/>
-	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/blob/master/source/react-redux-demo/GIF3.gif" width="350px"/>
+	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/master/source/react-redux-demo/GIF1.gif" width="350px"/>
+	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/master/source/react-redux-demo/GIF2.gif" width="350px"/>
+	<img src="https://raw.githubusercontent.com/beautifulBoys/beautifulBoys.github.io/master/source/react-redux-demo/GIF3.gif" width="350px"/>
 
 </p>
 

@@ -1,6 +1,11 @@
 # react-redux-demo
 
-> 这是一个 react 和 redux 配合的一个简单入门项目，纯原创。我也是通过完成这个项目，对 react-redux 有了粗浅的认识。
+> 这是一个 react 和 redux 配合的一个简单入门项目，原创。
+
+## 简单说明
+
+这个项目非常简单，除了入门 redux 几乎没有意义。我是看 Todos 那个例子来学习 redux 的，看了快两天才大概明白。Todos 用来展示数据流是个好例子，但是逻辑组件和普通组件引用太繁杂，初看起来很是费力，而且 react-redux 也没有像样点的文档可以看，入门走的很艰辛。所以写了这个例子，结构相对更加简单统一，应该要更容易学一点。。。这个是我大概搞清楚 redux 后写的一个练手项目，入门应该不错。  
+下面提供一个 `redux` 和 `vuex` 的比较，帮你更加简单的入门。
 
 笔耕不掇，天道酬勤。  https://beautifulboys.github.io/
 
@@ -15,7 +20,7 @@
 
 克隆项目：https://github.com/beautifulBoys/react-redux-demo.git
 
-预览地址：[点我跳转](https://www.baidu.com)。 请用Chrome浏览器-手机模式查看
+预览地址：[点我跳转](https://beautifulboys.github.io/html/react-redux-demo/)。 请用Chrome浏览器-手机模式查看
 
 
 <p align="center">
@@ -131,10 +136,40 @@ case 'TOOGLE_MODEL':
 
 到此处，一个数据流就走完了。它的好处就是 reducer 的改变都在这个方法里面，数据的变化可以轻松追踪。
 
+上面说了，dispatch 是触发所有的 reducer 重新计算，那么多个 reducer 怎么区分呢？修改错了怎么办？ 这个就通过 action 来区分的，每一个action 都会有一个 type 属性，这个是不可以重复的。他就是用来区分 reducer 的，在遍历所有的 reducer 的时候，通过判断 action.type 来走符合条件的分支，以此正确修改 reducer 数据。这也是 action 存在的意义。
 
+多个 reducer 可以通过 `combineReducers` 来组合到一起。`mapStateToProps` 中 通过 `state['goods' | 'price' | 'model']` 来获取到值。
+```js
+const App = combineReducers({
+  goods,
+  price,
+  model
+})
+```
 
+## VUEX 和 REDUX 的比较
 
+reducer 相当于 vuex 中的 state 和 mutations 的组合。在vuex 中，state 用来存储数据，而 mutations 仅仅用来改变数据。  
+而 reducer 就不一样了，他是一个函数，它有变化的本事，还可以带一个返回值。他一个人就可以干 mutations（变化） 和 state（存储） 的事。
 
+vuex 中的 action 类似于下面的函数，vuex 的 commit 方法 和 dispatch 异曲同工。
+```js
+const mapDispatchToProps = (dispatch) => ({
+  checkEvent: () => {
+    dispatch(model())
+  }
+})
+```
+
+vuex 的 getter 类似于下面的函数
+```js
+const mapStateToProps = (state) => ({
+  filterList: state.list.filter(item => item.price > 100) // 选取 state.list 中 price 大于 100 的数据
+})
+```
+redux 的 action 在 vues 中不存在的。 因为 vuex 和 react 原理不一样，vuex 是基于订阅事件来实现的，这样触发是固定的。而 react 是主动去触发，然后遍历 reducer 来改变符合条件的数据。
+
+以上就是所有的感悟，希望对你有帮助。
 
 
 

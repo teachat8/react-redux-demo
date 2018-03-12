@@ -20,7 +20,7 @@
 
 克隆项目：https://github.com/beautifulBoys/react-redux-demo.git
 
-预览地址：[点我跳转](https://beautifulboys.github.io/html/react-redux-demo/)。 请用Chrome浏览器-手机模式查看
+预览地址：[点我跳转](https://beautifulboys.github.io/phone/react-redux-demo/)。 请用Chrome浏览器-手机模式查看
 
 
 <p align="center">
